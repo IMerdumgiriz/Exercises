@@ -12,4 +12,17 @@ func karne(){
             }
         }
 
-
+// with Switch 
+func Notes(){
+            let gradePoint = Int.random(in: 0...100)
+            switch gradePoint{
+            case 85...100:
+                print("TAKDİR BELGESİ ALMAYA HAK KAZANDIN")
+            case 70...84:
+                print("TEŞEKKÜR BELGESİ ALMAYA HAK KAZANDIN")
+            case 50...69:
+                print("TEBRİKLER SINIFI GEÇTİNİZ")
+            default:
+                print("MAALESEF SINIFTA KALDINIZ")
+            }
+        }
