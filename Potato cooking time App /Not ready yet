@@ -6,11 +6,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var progressBar: UIProgressView!
     override func viewDidLoad() {
-        let patatoTimer = ["hPatato":21,"kPatato":31,"pPatato":41]
+        let patatoTimer = ["hPatato":2301,"kPatato":1023,"pPatato":4020]
         var timer = Timer()
         var secondsPassed = 0
         var totalTime = 0
-      
         @IBAction func hardnessSelected(_ sender: UIButton) {
             timer.invalidate()
             var hardness = sender.currentTitle!
