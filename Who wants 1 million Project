@@ -1,0 +1,43 @@
+@IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
+    
+    @IBOutlet weak var answer1: UIButton!
+    @IBOutlet weak var answer2: UIButton!
+    @IBOutlet weak var answer3: UIButton!
+    @IBOutlet weak var answer4: UIButton!
+    // quiz değişkeni oluşturdum questionNumber[1] ile çalıştırdığım zaman 1 tane soru gösteriyor buttonlara tıkladığımda hiçbirşey çalışmıyor.
+    // answer diye ayrı bir değişken oluştursam ve cevapları yazsam.! Button a tıkladığımda yanlışları ve doğruları göstermesi lazım buttonların.
+    var quiz = [
+        ["İstiklal marşı hangi kelime ile başlıyor?","Atatürk","Sen","Yurdum","Kan","Korkma"],
+        ["İstiklal Marşı kim yazdı?"],
+        ["Türkiye nin ilk CumhurBaşkanı Kimdir?","Atatürk","RTE","Turgut Özal","Konya"],
+        ["99 depremi ne zaman olmuştur?","1990","2009","1999","1998"],
+        ["Çin Seddi nerede inşaa edilmiştir?","Japonya","Çin","Berlin","Konya"]]
+//    var answer = []
+    var questionNumber = 0
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateUI()
+}
+    @IBAction func answerButtonPressed(_ sender: UIButton) {
+        let userAnswer = sender.currentTitle
+        let actualAnswer = quiz[questionNumber][1]
+        if userAnswer == actualAnswer{
+            print("Doğru")
+        }else{
+            print("Yanlış")
+        }
+        if  questionNumber + 1 < quiz.count{
+            questionNumber += 1
+        }else{
+           questionNumber = 0
+        }
+        updateUI()
+        
+           }
+    func updateUI(){
+        questionLabel.text = quiz[questionNumber][1]
+    }
+    
+}
+
