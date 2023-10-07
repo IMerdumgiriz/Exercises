@@ -1,5 +1,5 @@
 // Switch ve if-else ile Bir Öğrencinin Yıl Sonu Belgesini Gösteren Kod
-// A student's year-end grade point average with if else and Switch
+// A student's year-end grade point average with if else and Switch case
 var gradePoint = 100
 func karne(){
             let gradePoint = Int.random(in: 0...100)
