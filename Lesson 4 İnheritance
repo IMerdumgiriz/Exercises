@@ -1,0 +1,44 @@
+// i did this project solo so There may be deficiencies.
+// please share your comments with me
+// i did use the inheritance
+//----------------- main.swift
+import Foundation
+
+let demon = Enemy()
+print(demon.health)
+demon.move()
+demon.attack()
+
+var monster = Monster()
+monster.attack()
+monster.teeths = 22
+monster.talk(speech: "Demon Attacks")
+monster.move()
+monster.attack()
+//----------------- Enemy.swift
+class Enemy{
+    var health = 120
+    var attackStrength = 10
+    func attack(){
+        print("Land a hit,does \(attackStrength)damage")
+    }
+    func move(){
+        print("Walk Forwards")
+    }
+}
+//----------------- Monster.swift
+class Monster: Enemy {
+    var teeths = 22
+    
+    func talk(speech:String){
+        print("\(speech)")
+    }
+    override func move(){
+        print("Fly Forwards")
+    }
+    override func attack() {
+        super.attack()
+        print("Fire on the Hole, does 10 damage")
+    }
+
+}
