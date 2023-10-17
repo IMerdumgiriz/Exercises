@@ -1,0 +1,20 @@
+import UIKit
+// UserDefaults: Anahtar-değer çiftleri bir plist'e kaydedilir. Ve UserDefaults un eşzamanlı olarak yüklenmesi gerekir.
+// Başlangıç için ilk önce çağırıp ardından birbirlerine eşitledik.
+let defaults = UserDefaults.standard
+let dictionaryKey = "myDictionary"
+// defaults değeri için ayar yaptık.
+defaults.set(0,24, forKey: "Volume")
+    
+defaults.set("Jeager", forKey: "Nickname")
+defaults.set(Date(),forKey: "WhendidheOpenedtheApp"
+    // create the own array
+let array = [1,2,3]
+defaults.set(array, forKey: "myArray")
+ // create the dictionary
+let dictionary = ["Name:":" Eren"]
+defaults.set(dictionary, forKey: dictionaryKey)
+// --
+let volume = defaults.float(forKey: "Volume")
+let appOpened = defaults.float(forKey: "WhendidheOpenedtheApp")
+let myArray = defaults.array(forKey: "myArray") as! [Int]
