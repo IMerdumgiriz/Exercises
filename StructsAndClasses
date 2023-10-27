@@ -1,0 +1,50 @@
+//
+//  Structers.swift
+//  StructsAndClasses
+//
+//  Created by Eren lifetime on 27.10.2023.
+// FİLE: Structers.swift 
+
+import Foundation
+struct structHero{
+    var name:String
+    var universe:String
+    
+    mutating func reverseName(){
+        self.name = String(name.reversed())
+    }
+}
+// --------------------------------------------------------------------------------------------------------------
+//
+//  Classes.swift
+//  StructsAndClasses
+//
+//  Created by Eren lifetime on 27.10.2023.
+// FİLE: CLASSES
+
+class SuperMario{
+    var name:String
+    var universe:String
+    
+    init(name: String, universe: String) {
+        self.name = name
+        self.universe = universe
+    }
+}
+//var heros = SuperMario(name: "Batman", universe: "Ev")
+// --------------------------------------------------------------------------------------------------------------
+
+//
+//  main.swift
+//  StructsAndClasses
+//
+//  Created by Eren lifetime on 27.10.2023.
+// FİLE: main
+
+var hero = structHero(name: "Iron Man", universe: "Marvel")
+var anotherHero = hero
+
+//anotherHero.name = "Wolf Man"
+//print(hero.name)
+//print(anotherHero.name)
+anotherHero.name
