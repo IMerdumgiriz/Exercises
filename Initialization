@@ -1,0 +1,22 @@
+ViewController.swift
+import UIKİt
+class ViewController{
+  override func viewDidLoad(){
+
+  }
+}
+-------------------
+struct AnotherList:Identifiable{
+    
+    var id = UUID()
+    var job:String
+    var mission:String
+init(id: UUID = UUID(), job: String, mission: String) {
+        self.id = id
+        self.job = job
+        self.mission = mission
+    }
+}
+    var group1 = AnotherList(job: "Study Homework", mission: "Unsuccessful")
+    var group2 = AnotherList(job: "Read a Book", mission: "Unsuccessful")
+    var groupall = [grup1,grup2]
