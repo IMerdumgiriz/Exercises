@@ -17,6 +17,4 @@ init(id: UUID = UUID(), job: String, mission: String) {
         self.mission = mission
     }
 }
-    var group1 = AnotherList(job: "Study Homework", mission: "Unsuccessful")
-    var group2 = AnotherList(job: "Read a Book", mission: "Unsuccessful")
-    var groupall = [grup1,grup2]
+    
