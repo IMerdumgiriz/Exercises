@@ -1,0 +1,25 @@
+//
+//  ViewController.swift
+//  NotHesaplama
+//
+//  Created by Eren lifetime on 10/7/22.
+// 2 SAYININ TOPLAMINI VEREN VE BUNU BUTTON A BASARAK LABEL 'A YAZDIRAN KOD
+
+import UIKit
+
+class ViewController: UIViewController {
+    @IBOutlet weak var finalText:UITextField!   
+    @IBOutlet weak var vizeText: UITextField!
+    @IBOutlet weak var noteLbl: UILabel!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        noteLbl.text = ""
+    }
+    @IBAction func calculateNote(_ sender: Any) {
+        let vizeNote = Int(vizeText.text!)!
+        let finalNote = Int(finalText.text!)!
+        let totalNote = (vizeNote + finalNote) / 2
+        noteLbl.text = "\(totalNote)"
+    } 
+}
+
