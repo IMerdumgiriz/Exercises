@@ -1,0 +1,64 @@
+
+// The Result :
+// Client: I've got a simple component
+// Result: Door
+
+// Client: Now I've got a decorated component
+// Result: Vintage(Blue(Door))
+//
+//  DesignPatterns.swift
+//  ToDoList
+//
+//  Created by Eren lifetime on 14.12.2023.
+//
+
+import UIKit
+protocol Component {
+    func oparation() -> String
+}
+// DoorComponent objemiz
+class DoorComponent:Component{
+    func oparation() -> String {
+        return "Door"
+    }
+}
+// Decorator u Component e implament(uygulama) ettik.
+class Decorator:Component{
+    
+    private var component: Component
+    
+    init(component: Component) {
+        self.component = component
+    }
+    func oparation() -> String {
+        return component.oparation()
+    }
+}
+class BlueDecorator:Decorator {
+    override func oparation() -> String {
+        return "Blue(" + super.oparation() + ")"
+    }
+}
+class RedDecorator:Decorator{
+    override func oparation() -> String {
+        return "Red(" + super.oparation() + ")"
+    }
+}
+class Client{
+    static func someClientCode(component:Component){
+        print("Result: " + component.oparation())
+    }
+}
+class DecoratorConceptual{
+    func testDecorator(){
+        print("Client : I ve got a simple component")
+        let simple = DoorComponent()
+        Client.someClientCode(component: simple)
+        
+        let blueDecorator = BlueDecorator(component: simple)
+        let redDecorator = RedDecorator(component: blueDecorator)
+        print("\nClient: Now I ve got a decorated component")
+        Client.someClientCode(component: redDecorator)
+        
+    }
+}
